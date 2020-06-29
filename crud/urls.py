@@ -1,7 +1,10 @@
-from django.contrib import admin
-from django.urls import path,include
-
+from django.urls import path
+from . import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("",include("employee.urls"))
+    path("",views.show),
+    path("show/",views.show),
+    path("add/",views.emp),
+    path("edit/<int:empid>",views.edit),
+    path("delete/<int:empid>",views.remove),
+    path("update/<int:empid>",views.update),
 ]

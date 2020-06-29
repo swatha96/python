@@ -1,0 +1,22 @@
+<h1>Employee information modification Form</h1>
+<form method="post" action="/update/{{form.id}}">
+{% csrf_token %}
+
+<label>Auto Gen ID</label>
+<input type="text" value="{{form.id}}" disabled name="id">
+
+
+<label>Emp ID</label>
+<input type="text" value="{{form.eid}}" name="eid">
+
+<label>Emp Name</label>
+<input type="text" value="{{form.ename}}" name="ename">
+
+<label>Email ID</label>
+<input type="email" value="{{form.email}}" name="email">
+
+<label>Mobile Number</label>
+<input type="number" value="{{form.emobile}}" name="emobile">
+
+<input type="submit" value="Save Modification">
+</form>

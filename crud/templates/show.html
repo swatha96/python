@@ -1,0 +1,26 @@
+<h1>All Employees</h1>
+
+<a href='/add/'>Add New Employee</a>
+
+<table border="1">
+<tr>
+<th>ID</th> <th>EMPID</th> <th>NAME</th> <th>MOBILE</th> <th>EMAIL</th>
+</tr>
+
+{% for emp in allemp %}
+    <tr>
+        <td>{{emp.id}}</td>
+        <td>{{emp.eid}}</td>
+        <td>{{emp.ename}}</td>
+        <td>{{emp.emobile}}</td>
+        <td>{{emp.email}}</td>
+        <td> <a href="/edit/{{emp.id}}">Edit</a>  </td>
+        <td> <a href="/delete/{{emp.id}}">Delete</a>  </td>
+    </tr>
+{% endfor %}
+</table>
+
+
+
+
+
